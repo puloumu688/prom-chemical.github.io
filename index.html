@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鄂尔多斯市普洛姆化工设备销售有限公司 - 棕榈油水解脂肪酸成套设备</title>
+<style>
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+}
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 头部样式 */
+header {
+    background: linear-gradient(135deg, #0f3460 0%, #16537e 100%);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+/* 导航栏 */
+.nav {
+    background: #16537e;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.nav a {
+    color: #fff;
+    margin: 0 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+}
+.nav a:hover {
+    opacity: 0.7;
+}
+
+/* 首屏Banner */
+.banner {
+    height: 500px;
+    background: url("https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3021010000000000000000000000000000000000000000001.jpeg") center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 52, 96, 0.6);
+}
+.banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    padding: 0 2rem;
+}
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #e6b800;
+    color: #0f3460;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #ffcc00;
+}
+
+/* 容器通用样式 */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+.section-title {
+    text-align: center;
+    color: #0f3460;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #e6b800;
+}
+
+/* 设备展示卡片 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.product-card h3 {
+    color: #0f3460;
+    padding: 1rem 1.5rem 0.5rem;
+    font-size: 1.2rem;
+}
+.product-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* 工艺流程 */
+.process-section {
+    background: #fff;
+    padding: 3rem 0;
+}
+.process-flow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.process-step {
+    text-align: center;
+    max-width: 150px;
+}
+.process-step img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}
+.process-step h4 {
+    color: #0f3460;
+    font-size: 0.95rem;
+}
+.arrow {
+    color: #0f3460;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 关于我们 */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: 400px;
+    object-fit: cover;
+}
+.about-text h3 {
+    color: #0f3460;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.about-text p {
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* 联系我们 */
+.contact-section {
+    background: #0f3460;
+    color: #fff;
+    padding: 3rem 0;
+}
+.contact-section .section-title {
+    color: #fff;
+}
+.contact-section .section-title::after {
+    background: #e6b800;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.contact-item {
+    text-align: center;
+}
+.contact-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #e6b800;
+}
+.contact-item p {
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+/* 页脚 */
+footer {
+    background: #0a2540;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+    .banner h2 {
+        font-size: 1.8rem;
+    }
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+    .process-flow {
+        flex-direction: column;
+    }
+    .arrow {
+        transform: rotate(90deg);
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- 头部公司名称 -->
+<header>
+    <h1>鄂尔多斯市普洛姆化工设备销售有限公司</h1>
+    <p>Ordos Prom Chemical Equipment Sales Co., Ltd.</p>
+</header>
+
+<!-- 导航栏 -->
+<div class="nav">
+    <a href="#home">首页</a>
+    <a href="#products">设备展示</a>
+    <a href="#process">工艺流程</a>
+    <a href="#about">关于我们</a>
+    <a href="#contact">联系我们</a>
+</div>
+
+<!-- 首屏Banner -->
+<div class="banner" id="home">
+    <div class="banner-content">
+        <h2>棕榈油水解脂肪酸成套设备 · 全球进出口服务商</h2>
+        <p>专业提供棕榈油加工、水解、精炼、甘油回收、污水处理一站式解决方案</p>
+        <a href="#contact" class="btn">立即咨询</a>
+    </div>
+</div>
+
+<!-- 核心设备展示（100%匹配你的实景设备图） -->
+<div class="container" id="products">
+    <h2 class="section-title">核心设备展示</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3021010000000000000000000000000000000000000000002.jpeg" alt="棕榈油加工设备">
+            <h3>棕榈油预处理与压榨设备</h3>
+            <p>从棕榈果到毛油的完整预处理产线，适配不同产能需求，稳定高出油率</p>
+        </div>
+        <div class="product-card">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3021010000000000000000000000000000000000000000003.jpeg" alt="水解脂肪酸成套设备">
+            <h3>板式水解塔成套设备</h3>
+            <p>核心水解工艺设备，脂肪酸转化率≥98%，连续化全自动生产适配大产能</p>
+        </div>
+        <div class="product-card">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3021010000000000000000000000000000000000000000004.jpeg" alt="脂肪酸分离精炼设备">
+            <h3>脂肪酸分离精炼设备</h3>
+            <p>高纯度脂肪酸分离提纯系统，真空工艺保障产品品质，适配高端工业需求</p>
+        </div>
+        <div class="product-card">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3021010000000000000000000000000000000000000000005.jpeg" alt="甘油精制设备">
+            <h3>甘油精制成套设备</h3>
+            <p>高纯度甘油提纯设备，适配医药、日化级原料生产，稳定达标95%无水甘油</p>
+        </div>
+        <div class="product-card">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3021010000000000000000000000000000000000000000006.jpeg" alt="三效蒸发系统">
+            <h3>甘油精制三效蒸发系统</h3>
+            <p>节能型甘油浓缩设备，蒸汽多次循环利用，综合能耗降低30%，绿色环保</p>
+        </div>
+        <div class="product-card">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3021010000000000000000000000000000000000000000007.jpeg" alt="化工成套设备">
+            <h3>全产业链化工成套设备</h3>
+            <p>棕榈油加工全流程交钥匙工程，从设计制造到安装调试，一站式全球交付</p>
+        </div>
+    </div>
+</div>
+
+<!-- 工艺流程 -->
+<div class="process-section" id="process">
+    <div class="container">
+        <h2 class="section-title">棕榈油全产业链工艺流程</h2>
+        <div class="process-flow">
+            <div class="process-step">
+                <img src="https://cdn-icons-png.flaticon.com/128/3143/3143643.png" alt="原料预处理">
+                <h4>原料预处理</h4>
+            </div>
+            <div class="arrow">→</div>
+            <div class="process-step">
+                <img src="https://cdn-icons-png.flaticon.com/128/2949/2949822.png" alt="预水解">
+                <h4>预水解</h4>
+            </div>
+            <div class="arrow">→</div>
+            <div class="process-step">
+                <img src="https://cdn-icons-png.flaticon.com/128/1005/1005141.png" alt="板式水解">
+                <h4>板式水解</h4>
+            </div>
+            <div class="arrow">→</div>
+            <div class="process-step">
+                <img src="https://cdn-icons-png.flaticon.com/128/6840/6840521.png" alt="脂肪酸分离">
+                <h4>脂肪酸分离</h4>
+            </div>
+            <div class="arrow">→</div>
+            <div class="process-step">
+                <img src="https://cdn-icons-png.flaticon.com/128/9533/9533541.png" alt="甘油精制">
+                <h4>甘油精制</h4>
+            </div>
+            <div class="arrow">→</div>
+            <div class="process-step">
+                <img src="https://cdn-icons-png.flaticon.com/128/2906/2906303.png" alt="污水回用">
+                <h4>污水回用</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 关于我们 -->
+<div class="container" id="about">
+    <h2 class="section-title">关于我们</h2>
+    <div class="about-section">
+        <div class="about-img">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3021010000000000000000000000000000000000000000008.jpeg" alt="工厂实景车间">
+        </div>
+        <div class="about-text">
+            <h3>专业化工设备解决方案服务商</h3>
+            <p>鄂尔多斯市普洛姆化工设备销售有限公司，专注于棕榈油、油脂化工、脂肪酸加工成套设备的研发、销售与进出口业务。</p>
+            <p>我们为全球客户提供从工艺设计、设备制造、安装调试到人员培训的一站式交钥匙工程，产品覆盖东南亚、非洲、南美等棕榈油主产区，拥有丰富的海外项目落地经验。</p>
+            <p>核心优势：定制化产能适配、高转化率水解工艺、节能降耗设计、全周期售后运维、全球进出口合规服务。</p>
+            <a href="#contact" class="btn">了解更多</a>
+        </div>
+    </div>
+</div>
+
+<!-- 联系我们 -->
+<div class="contact-section" id="contact">
+    <div class="container">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h4>公司名称</h4>
+                <p>鄂尔多斯市普洛姆化工设备销售有限公司</p>
+                <p>Ordos Prom Chemical Equipment Sales Co., Ltd.</p>
+            </div>
+            <div class="contact-item">
+                <h4>业务范围</h4>
+                <p>棕榈油加工设备销售</p>
+                <p>成套设备进出口服务</p>
+                <p>交钥匙工程与技术支持</p>
+            </div>
+            <div class="contact-item">
+                <h4>联系方式</h4>
+                <p>邮箱：contact@prom-chemical.com</p>
+                <p>WhatsApp：+86 13XXXXXXXXX</p>
+                <p>地址：内蒙古鄂尔多斯市达拉特旗</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer>
+    <p>© 2025 Ordos Prom Chemical Equipment Sales Co., Ltd. All Rights Reserved. 鄂尔多斯市普洛姆化工设备销售有限公司 版权所有</p>
+</footer>
+
+</body>
+</html>
